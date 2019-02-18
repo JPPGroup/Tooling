@@ -8,12 +8,12 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Sign tool</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
-    <copyright>Copyright 2019</copyright>     
-	<ItemGroup>
+    <copyright>Copyright 2019</copyright>     	
+  </metadata>
+  <ItemGroup>
     <Content Include="signtool.exe">
       <Pack>true</Pack>
       <PackagePath>tools\signtool.exe</PackagePath>
     </Content>
   </ItemGroup>	
-  </metadata>
 </package>
