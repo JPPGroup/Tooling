@@ -1,9 +1,11 @@
-param ($BaseOutputPath = $(throw "Base Output Path parameter is required."), 		
-		$Configuration = $(throw "Configuration parameter is required."))
+param ($BaseOutputPath = $(throw "Base Output Path parameter is required."), 				
+		$ProjectPath = $(throw "Project path parameter is required."))
 		
-$files = Get-ChildItem -Include '%$BaseOutputPath\$Configuration\*.dll'
+$searchString = ($ProjectPath + '\' + $BaseOutputPath)
+$files = Get-ChildItem -Path $searchString -Include *.dll -Recurse
 
-foreach ($file in $files){
-	& "signtool.exe" sign /a /tr "http://sha256timestamp.ws.symantec.com/sha256/timestamp" "%file"		
+foreach ($file in $files){	
+	& ($PSScriptRoot + "\signtool.exe") sign /a /tr "http://sha256timestamp.ws.symantec.com/sha256/timestamp" $file		
 }
+
 
