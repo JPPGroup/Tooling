@@ -1,6 +1,6 @@
 <!-- Jpp.Common.Tooling.Signing.targets -->
 <Project> 
   <Target Name="RunProtection" AfterTargets="SignAssembly" Condition="'$(Configuration)' == 'Release' ">
-    <Exec Command="powershell.exe –NonInteractive –ExecutionPolicy Unrestricted –Command &quot;&amp; { $(MSBuildThisFileDirectory)..\tools\Protect.ps1 -ProjectPath:$(MSBuildProjectDirectory) }&quot;"/>
+    <Exec Command="powershell.exe –NonInteractive –ExecutionPolicy Unrestricted –Command &quot;&amp; { $(MSBuildThisFileDirectory)..\tools\Protect.ps1 -ProjectPath:&apos;$(MSBuildProjectDirectory)&apos; }; exit $LASTEXITCODE&quot;"/>
   </Target>
 </Project>
