@@ -2,13 +2,14 @@
 <package >
   <metadata>
     <id>Jpp.Common.Tooling.Protection</id>
-    <version>0.3.1</version>
+    <version>0.3.2</version>
     <authors>JPP Consulting</authors>
     <owners>JPP Consulting</owners>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Protect tool</description>
     <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2019</copyright>     	
+	<repository type="git" url="https://github.com/JPPGroup/Tooling" />
 	<dependencies>
       <dependency id="Jpp.Common.Tooling.Signing" version="0.4.0" />    
 	</dependencies>
