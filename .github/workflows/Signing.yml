@@ -3,6 +3,8 @@ name: Signing CI
 on:
   push:
     branches: [ master ]
+    paths:
+    - 'Signing/**'
 
 jobs:  
   build:    
