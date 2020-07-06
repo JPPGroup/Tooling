@@ -1,0 +1,22 @@
+name: Protection CI
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+    - 'Protection/**'
+
+jobs:  
+  build:    
+    runs-on: ubuntu-latest
+    
+    steps:    
+    - uses: actions/checkout@v2   
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+    - name: Pack
+      run: nuget pack Protection/Package.nuspec      
+    - name: Add Github Source
+      run: nuget sources add -name "github" -Source https://nuget.pkg.github.com/jppgroup/index.json -Username jppgroup -Password ${{ secrets.GITHUB_TOKEN }}
+    - name: Publish
+      run: nuget push **\*.nupkg -source "github"
