@@ -14,5 +14,5 @@ jobs:
       uses: NuGet/setup-nuget@v1.0.2
     - name: Pack
       run: nuget pack Signing/Package.nuspec
-    #- name: Publish
-      #run: dotnet nuget push "bin/Release/OctocatApp.1.0.0.nupkg" --source "github"
+    - name: Publish
+      run: nuget push **\*.nupkg -source https://github.com/JPPGroup/Tooling -apikey ${{ secrets.GITHUB_TOKEN }}
