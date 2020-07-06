@@ -13,6 +13,8 @@ jobs:
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.0.2
     - name: Pack
-      run: nuget pack Signing/Package.nuspec
+      run: nuget pack Signing/Package.nuspec      
+    - name: Add Github Source
+      run: nuget sources add -name "github" -Source https://nuget.pkg.github.com/jppgroup/index.json -Username jppgroup -Password ${{ secrets.GITHUB_TOKEN }}
     - name: Publish
-      run: nuget push **\*.nupkg -source https://github.com/JPPGroup/Tooling -apikey ${{ secrets.GITHUB_TOKEN }}
+      run: nuget push **\*.nupkg -source "github"
