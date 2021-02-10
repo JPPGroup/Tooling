@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Jpp.Common.Tooling.Signing</id>
-    <version>0.4.2</version>
+    <version>0.4.3</version>
     <authors>JPP Consulting</authors>
     <owners>JPP Consulting</owners>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
