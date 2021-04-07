@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Jpp.Common.Tooling.Protection</id>
-    <version>0.3.3</version>
+    <version>0.3.4</version>
     <authors>JPP Consulting</authors>
     <owners>JPP Consulting</owners>    
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -11,7 +11,7 @@
     <copyright>Copyright 2019</copyright>     	
 	<repository type="git" url="https://github.com/JPPGroup/Tooling" />
 	<dependencies>
-      <dependency id="Jpp.Common.Tooling.Signing" version="0.4.1" />    
+      <dependency id="Jpp.Common.Tooling.Signing" version="0.4.5" />    
 	</dependencies>
 	</metadata>    
 </package>
