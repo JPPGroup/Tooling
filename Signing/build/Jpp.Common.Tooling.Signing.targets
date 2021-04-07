@@ -1,6 +1,6 @@
 <!-- Jpp.Common.Tooling.Signing.targets -->
 <Project> 
   <Target Name="SignAssembly" AfterTargets="Build" BeforeTargets="PostBuildEvent" Condition="$(Configuration.Contains('Release'))">
-    <Exec Command="powershell.exe –NonInteractive –ExecutionPolicy Unrestricted –Command &quot;&amp; { $(MSBuildThisFileDirectory)..\tools\Sign.ps1 -ProjectPath:&quot;$(MSBuildProjectDirectory)&quot; -BaseOutputPath:&quot;$(OutputPath)&quot; }&quot;"/>
+    <Exec Command="powershell.exe –NonInteractive –ExecutionPolicy Unrestricted –Command &quot;&amp; { $(MSBuildThisFileDirectory)..\tools\Sign.ps1 -ProjectPath:&apos;$(MSBuildProjectDirectory)&apos; -BaseOutputPath:&apos;$(OutputPath)&apos; }&quot;"/>
   </Target>
 </Project>
